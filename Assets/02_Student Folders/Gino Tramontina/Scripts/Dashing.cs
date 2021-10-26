@@ -1,16 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Dashing : MonoBehaviour
 {
 
-    // player position
+    // player object
     public GameObject player;
 
     //CharecterContoller and PlayerCharacterContoller responsible for controlling the player
     CharacterController m_Controller;
     PlayerCharacterController p_Controller;
+
+    //cooldown bar of the dash
+    public Image cooldown;
+
     // speed of dash (1000 translates about 3m per frame)
     public float dash_speed = 10;
 
@@ -63,16 +68,22 @@ public class Dashing : MonoBehaviour
         if (dash_enabled_on_start)
         {
             can_dash = true;
+            delay_time = 1f;
         }
        
     }
 
     // Update is called once per frame
     void Update()
-    {
+    { 
         //if the player has the dash powerup
         if (can_dash)
         {
+            //the cooldown bar is full when player just dashed/is dashing
+            //cooldown bar empties until player can dash again
+            float fill = delay_time / dash_delay_s;
+            cooldown.fillAmount = 1 - fill;
+
             //get the player's rotation
             Quaternion rot = player.GetComponent<Transform>().rotation;
             
@@ -87,6 +98,7 @@ public class Dashing : MonoBehaviour
                 Debug.Log("Dash key pressed.");
                 // make the player dash
                 in_dash = true;
+                delay_time = 0f;
                 p_Controller.gravityDownForce = 0;
             }
 
@@ -99,7 +111,6 @@ public class Dashing : MonoBehaviour
             else if (in_cooldown && delay_time >= dash_delay_s)
             {
                 in_cooldown = false;
-                delay_time = 0f;
             }
             //if the player is dashing and dash is not over yet
             else if (in_dash && dash_time < dash_length_s)
@@ -117,6 +128,10 @@ public class Dashing : MonoBehaviour
                 in_cooldown = true;
                 dash_time = 0f;
                 p_Controller.gravityDownForce = gravity;
+            }
+            else
+            {
+                delay_time = 1f;
             }
         }
     }
