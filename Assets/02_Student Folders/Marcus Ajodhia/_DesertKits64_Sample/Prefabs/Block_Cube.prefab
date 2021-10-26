@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 23000011230670128}
   - component: {fileID: 6075068067885739519}
   - component: {fileID: 1715820703342762453}
+  - component: {fileID: 5190637152045608429}
   m_Layer: 0
   m_Name: Block_Cube
   m_TagString: Untagged
@@ -126,3 +127,19 @@ MonoBehaviour:
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: 7538fba107f660248a3a61d2acb49060, type: 2}
+--- !u!208 &5190637152045608429
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011285132168}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
