@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2620131183356007196}
   - component: {fileID: 2620131183356007197}
   - component: {fileID: 2620131183356007194}
-  - component: {fileID: -5502963269710977636}
+  - component: {fileID: 3339500289556097119}
   m_Layer: 0
   m_Name: Devincibility
   m_TagString: Untagged
@@ -82,7 +82,7 @@ MonoBehaviour:
   pickupSFX: {fileID: 8300000, guid: 8dfdbc346713580429db9079ad1ff964, type: 3}
   pickupVFXPrefab: {fileID: 18133231791472539, guid: e44fc97440f45e946a0bdbdd460acfb9,
     type: 3}
---- !u!114 &-5502963269710977636
+--- !u!114 &3339500289556097119
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2620131183356007192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c353f50b9af2e4e4fa0aaf1a5d6e4108, type: 3}
+  m_Script: {fileID: 11500000, guid: 72667150d8c641e46a353110d6659abe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7296493021711450243
