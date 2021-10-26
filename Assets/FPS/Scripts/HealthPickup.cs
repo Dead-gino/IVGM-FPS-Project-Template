@@ -2,10 +2,6 @@
 
 public class HealthPickup : MonoBehaviour
 {
-    [Header("Parameters")]
-    [Tooltip("Amount of health to heal on pickup")]
-    public float healAmount;
-
     Pickup m_Pickup;
 
     void Start()
@@ -22,7 +18,7 @@ public class HealthPickup : MonoBehaviour
         Health playerHealth = player.GetComponent<Health>();
         if (playerHealth && playerHealth.canPickup())
         {
-            playerHealth.Heal(healAmount);
+            playerHealth.Heal(100 - playerHealth.currentHealth);
 
             m_Pickup.PlayPickupFeedback();
 

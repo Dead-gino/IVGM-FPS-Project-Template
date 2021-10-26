@@ -28,13 +28,6 @@ public class InvincibilityPickup : MonoBehaviour
             Destroy(gameObject);
 
         }
-        else 
-        {
-            playerHealth.invincible = false;
-            m_Pickup.PlayPickupFeedback();
-            Destroy(gameObject);
-
-        }
     }
 
 
