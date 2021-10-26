@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5989533081877901167}
   - component: {fileID: 5989533081877901166}
   m_Layer: 0
-  m_Name: Pickup_Shotgun
+  m_Name: Pickup_FlashLightGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
