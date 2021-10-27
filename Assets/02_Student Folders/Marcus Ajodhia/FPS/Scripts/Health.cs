@@ -24,6 +24,7 @@ public class Health : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
+        TimerController.instance.BeginTimer();
     }
 
     public void Heal(float healAmount)

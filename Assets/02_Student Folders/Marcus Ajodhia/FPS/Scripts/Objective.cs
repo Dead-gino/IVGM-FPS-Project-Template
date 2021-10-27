@@ -51,6 +51,7 @@ public class Objective : MonoBehaviour
         // unregister this objective form both HUD managers
         m_ObjectiveHUDManger.UnregisterObjective(this);
         m_NotificationHUDManager.UnregisterObjective(this);
+        TimerController.instance.EndTimer();
     }
 }
 

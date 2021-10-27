@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using System.Collections;
 
 [RequireComponent(typeof(CharacterController), typeof(PlayerInputHandler), typeof(AudioSource))]
 public class PlayerCharacterController : MonoBehaviour
@@ -143,6 +144,7 @@ public class PlayerCharacterController : MonoBehaviour
         // force the crouch state to false when starting
         SetCrouchingState(false, true);
         UpdateCharacterHeight(true);
+        //TimerController.instance.BeginTimer();
     }
 
     void Update()
@@ -193,10 +195,17 @@ public class PlayerCharacterController : MonoBehaviour
     void OnDie()
     {
         isDead = true;
-
+        TimerController.instance.EndTimer();
         // Tell the weapons manager to switch to a non-existing weapon in order to lower the weapon
         m_WeaponsManager.SwitchToWeaponIndex(-1, true);
+        //StartCoroutine(RespawnStartTimer());
     }
+
+    /*IEnumerator RespawnStartTimer()
+    {
+        yield return new WaitForSeconds(5);
+        TimerController.instance.BeginTimer();
+    }*/
 
     void GroundCheck()
     {
