@@ -65,7 +65,10 @@ public class EnemyMobile : MonoBehaviour
         animator.SetFloat(k_AnimMoveSpeedParameter, moveSpeed);
 
         // changing the pitch of the movement sound depending on the movement speed
-        m_AudioSource.pitch = Mathf.Lerp(PitchDistortionMovementSpeed.min, PitchDistortionMovementSpeed.max, moveSpeed / m_EnemyController.m_NavMeshAgent.speed);
+        if (Mathf.Lerp(PitchDistortionMovementSpeed.min, PitchDistortionMovementSpeed.max, moveSpeed / m_EnemyController.m_NavMeshAgent.speed) > 0)
+        {
+            m_AudioSource.pitch = Mathf.Lerp(PitchDistortionMovementSpeed.min, PitchDistortionMovementSpeed.max, moveSpeed / m_EnemyController.m_NavMeshAgent.speed);
+        }
     }
 
     void UpdateAIStateTransitions()
