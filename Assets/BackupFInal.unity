@@ -6452,6 +6452,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 182501887}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1115902957 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2707800222142829387, guid: d401b602eddc4e449b385a053f012a4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1198273586}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1115902965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115902957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4170175d245c6409bb0cb4cc7b2c5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: Navigate the Labyrinth and find an item to help you escape!
+  messagePrefab: {fileID: 3003312392959327722, guid: dbfc7742a2f49bf42a9a012e4ec4b773,
+    type: 3}
+  delayBeforeShowing: 0
 --- !u!1001 &1116844688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7035,6 +7057,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2707800222142829377, guid: d401b602eddc4e449b385a053f012a4c,
+        type: 3}
+      propertyPath: title
+      value: Navigate the Labyrinth
+      objectReference: {fileID: 0}
     - target: {fileID: 2707800222142829377, guid: d401b602eddc4e449b385a053f012a4c,
         type: 3}
       propertyPath: isOptional

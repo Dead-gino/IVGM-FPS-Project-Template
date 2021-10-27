@@ -22,10 +22,14 @@ public class LightPickup : MonoBehaviour
     void OnPicked(PlayerCharacterController player)
     {
 
-        torch.SetActive(true);
-        
+        // torch.SetActive(true);
 
-            m_Pickup.PlayPickupFeedback();
+        var torch_player = Instantiate(torch);
+        torch_player.transform.position = new Vector3(-1, 1, 1);
+        torch_player.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        torch_player.transform.SetParent(player.transform, false);
+        Debug.Log(torch_player.transform.position);
+        m_Pickup.PlayPickupFeedback();
 
             Destroy(gameObject);
         
