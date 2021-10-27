@@ -5192,8 +5192,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 946023808}
+  cooldown: {fileID: 0}
   dash_speed: 20
   dash_length: 400
+  dash_delay: 1000
+  dash_enabled_on_start: 0
 --- !u!1001 &957524156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10788,3 +10791,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c996b53e9f849234393d1e90f68d1679, type: 3}
+--- !u!1001 &7811437250929955827
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8189271825183918175, guid: 9d36000e92ccc7d4ea2cf449fec4a492,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8189271825183918175, guid: 9d36000e92ccc7d4ea2cf449fec4a492,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 34.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 8189271825183918175, guid: 9d36000e92ccc7d4ea2cf449fec4a492,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 8189271825183918175, guid: 9d36000e92ccc7d4ea2cf449fec4a492,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 29.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8189271825183918175, guid: 9d36000e92ccc7d4ea2cf449fec4a492,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8189271825183918175, guid: 9d36000e92ccc7d4ea2cf449fec4a492,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8189271825183918175, guid: 9d36000e92ccc7d4ea2cf449fec4a492,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8189271825183918175, guid: 9d36000e92ccc7d4ea2cf449fec4a492,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8189271825183918175, guid: 9d36000e92ccc7d4ea2cf449fec4a492,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8189271825183918175, guid: 9d36000e92ccc7d4ea2cf449fec4a492,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8189271825183918175, guid: 9d36000e92ccc7d4ea2cf449fec4a492,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085032563624223634, guid: 9d36000e92ccc7d4ea2cf449fec4a492,
+        type: 3}
+      propertyPath: m_Name
+      value: Dash_totem
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9d36000e92ccc7d4ea2cf449fec4a492, type: 3}
